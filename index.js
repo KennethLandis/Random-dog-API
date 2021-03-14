@@ -11,7 +11,7 @@ function getDogImages(numberOfDogs = 3) {
 
 function displayResults(responseJson) {
     let dogSRC = responseJson.message
-    console.log(dogSRC);
+    $('.results-img').remove()
     dogSRC.forEach(src => {
         //console.log(src);
         $('.results').append(`<img src="${src}" class="results-img" alt="test">`);
